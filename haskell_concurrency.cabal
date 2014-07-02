@@ -6,4 +6,4 @@ version:           1.0
 executable haskell-concurrency
   main-is:         Main.hs
   hs-source-dirs:  src
-  build-depends:   base
+  build-depends:   base, parallel
