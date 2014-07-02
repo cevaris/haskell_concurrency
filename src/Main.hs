@@ -26,7 +26,7 @@ test1 = do
 -- >>
 
 main = do
-  r <- runEval test1
+  r <- evaluate (runEval test1)
   print r
 
 
