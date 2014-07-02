@@ -1,0 +1,9 @@
+name:              haskell-concurrency
+Build-Type:        Simple
+cabal-version:     >= 1.2
+version:           1.0
+
+executable haskell-concurrency
+  main-is:         Main.hs
+  hs-source-dirs:  src
+  build-depends:   base
