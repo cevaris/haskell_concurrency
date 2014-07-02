@@ -1,3 +1,5 @@
+#!/usr/bin/env runhaskell
+
 module Main where
 
 import Control.Parallel
@@ -21,7 +23,7 @@ fib n = fib (n-1) + fib (n-2)
 -- <<test1
 test1 = do
   x <- rpar (fib 36)
-  y <- rpar (fib 35)
+  y <- rpar (fib 100)
   return (x,y)
 -- >>
 

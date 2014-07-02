@@ -4,6 +4,6 @@ cabal-version:     >= 1.2
 version:           1.0
 
 executable haskell-concurrency
-  main-is:         Main.hs
+  main-is:         rpar.hs
   hs-source-dirs:  src
   build-depends:   base, parallel
