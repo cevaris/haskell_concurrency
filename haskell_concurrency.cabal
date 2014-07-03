@@ -3,7 +3,20 @@ Build-Type:        Simple
 cabal-version:     >= 1.2
 version:           1.0
 
-executable haskell-concurrency
-  main-is:         rpar.hs
-  hs-source-dirs:  src
-  build-depends:   base, parallel, QuickCheck
+executable rpar
+    main-is:         rpar.hs
+    build-depends:   base, parallel, time
+
+
+executable sudoku
+    hs-source-dirs:  sudoku
+    main-is:         sudoku.hs
+    other-modules:   Soduku
+    build-depends:   base,
+                        parallel,
+                        array,
+                        time
+
+    extra-source-files:   sudoku17.1000.txt
+                            sudoku17.16000.txt
+                            sudoku17.49151.txt
