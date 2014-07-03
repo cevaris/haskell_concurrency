@@ -1,9 +1,12 @@
-name:              haskell-concurrency
+name:              hcc
 Build-Type:        Simple
 cabal-version:     >= 1.2
-version:           1.0
+version:           0.1
 
-
+data-dir:   src/resources/
+data-files: sudoku17.1000.txt
+            sudoku17.16000.txt
+            sudoku17.49151.txt
 
 executable rpar
     hs-source-dirs:  src
@@ -12,17 +15,14 @@ executable rpar
 
 
 executable sudoku1
-    hs-source-dirs:  src/sudoku
-    main-is:         sudoku1.hs
-    other-modules:   Sudoku
-    build-depends:   base,
-                        parallel,
-                        array,
-                        time
-
-    data-files: sudoku17.1000.txt
-                sudoku17.16000.txt
-                sudoku17.49151.txt
+    hs-source-dirs: src/sudoku/
+    main-is:        sudoku1.hs
+    other-modules:  Sudoku
+    build-depends:  base,
+                    parallel,
+                    array,
+                    time
+    
 
 
     
