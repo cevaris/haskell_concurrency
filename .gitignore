@@ -1,4 +1,7 @@
 **/workspace.xml
 dist/
 out/
+bin/
 .cabal-sandbox
+*.o
+*.hi
