@@ -1,9 +1,11 @@
--- <<all
+
 import Sudoku
 import Control.Exception
 import System.Environment
 import Data.Maybe
 
+
+-- <<main
 main :: IO ()
 main = do
   [f] <- getArgs                           -- <1>
