@@ -4,12 +4,13 @@ cabal-version:     >= 1.2
 version:           1.0
 
 executable rpar
+    hs-source-dirs:  src
     main-is:         rpar.hs
     build-depends:   base, parallel, time
 
 
 executable sudoku
-    hs-source-dirs:  sudoku
+    hs-source-dirs:  src/sudoku
     main-is:         sudoku.hs
     other-modules:   Soduku
     build-depends:   base,
