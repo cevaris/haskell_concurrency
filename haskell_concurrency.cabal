@@ -11,8 +11,8 @@ executable rpar
 
 executable sudoku
     hs-source-dirs:  src/sudoku
-    main-is:         sudoku.hs
-    other-modules:   Soduku
+    main-is:         sudoku1.hs
+    other-modules:   Sudoku
     build-depends:   base,
                         parallel,
                         array,
