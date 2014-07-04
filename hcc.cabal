@@ -8,6 +8,11 @@ data-files: sudoku17.1000.txt
             sudoku17.16000.txt
             sudoku17.49151.txt
 
+GHC-Options:
+    -O2
+    -threaded
+    -with-rtsopts=-T
+
 executable rpar
     hs-source-dirs:  src
     main-is:         rpar.hs
