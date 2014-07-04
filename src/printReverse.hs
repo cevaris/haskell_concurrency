@@ -1,12 +1,21 @@
 #!/usr/bin/env runhaskell
 
+import Control.Monad
+
+--main = do
+--    line <- getLine
+--    let cleanLine = trim ( line )
+--    if null cleanLine then
+--        return "Done"
+--    else do
+--        print $ reverseWords cleanLine ++ " - " ++ show ( isPalindrome ( cleanLine ) )
+--        main
+
 main = do
     line <- getLine
     let cleanLine = trim ( line )
-    if null cleanLine then
-        return "Done"
-    else do
-        putStrLn $ reverseWords cleanLine ++ " - " ++ show ( isPalindrome ( cleanLine ) )
+    when ( cleanLine /= [] ) $ do
+        print $ reverseWords cleanLine ++ " - " ++ show ( isPalindrome ( cleanLine ) )
         main
 
 trim :: String -> String
