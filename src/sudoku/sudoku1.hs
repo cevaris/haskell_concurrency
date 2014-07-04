@@ -8,12 +8,13 @@ import Paths_hcc
 -- <<main
 main :: IO ()
 main = do
-  [f] <- getArgs                           -- <1>
-  filepath <- getDataFileName f
-  file <- readFile filepath                -- <2>
+    [f] <- getArgs                           -- <1>
+  
+    filepath <- getDataFileName f
+    file <- readFile filepath                -- <2>
 
-  let puzzles   = lines file               -- <3>
-      solutions = map solve puzzles        -- <4>
+    let puzzles   = lines file               -- <3>
+        solutions = map solve puzzles        -- <4>
 
-  print (length (filter isJust solutions)) -- <5>
+    print (length (filter isJust solutions)) -- <5>
 -- >>

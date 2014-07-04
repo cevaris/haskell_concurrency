@@ -4,7 +4,7 @@ main = do
     line <- getLine
     let cleanLine = trim ( line )
     if null cleanLine then
-        return ()
+        return "Done"
     else do
         putStrLn $ reverseWords cleanLine ++ " - " ++ show ( isPalindrome ( cleanLine ) )
         main
