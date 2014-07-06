@@ -1,4 +1,4 @@
-##Concurrency and Parallelization
+#Concurrency and Parallelization
 
 #### When Parallelizing code, avoid breaking work into small, fixed number of partitions:
 
