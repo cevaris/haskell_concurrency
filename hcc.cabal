@@ -36,6 +36,20 @@ executable sudoku2
                     -threaded
                     -rtsopts
                     -eventlog
+
+executable sudoku3
+    hs-source-dirs: src/sudoku/
+    main-is:        sudoku3.hs
+    other-modules:  Sudoku
+    build-depends:  base,
+                    deepseq,
+                    parallel,
+                    array,
+                    time     
+    ghc-options:    -O2
+                    -threaded
+                    -rtsopts
+                    -eventlog
            
     
 
