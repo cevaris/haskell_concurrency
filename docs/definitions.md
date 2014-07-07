@@ -15,7 +15,7 @@
 ####Static/Dynamic Partitioning:
 - Static partitioning is breaking down the problem into a fixed number of chunks. Dynamic is allows the partitioning size to be calculated at runtime whenever a free CPU core processor frees up.
 
-
-
+####NFData
+- Short for **Normal Form data**. Normal form is a state or value which data has been fully evaluated. 
 
  
