@@ -50,6 +50,19 @@ executable sudoku3
                     -threaded
                     -rtsopts
                     -eventlog
+
+executable strategy
+    hs-source-dirs: src/
+    main-is:        strategy.hs
+    build-depends:  base,
+                    parallel,
+                    array,
+                    time     
+    ghc-options:    -O2
+                    -threaded
+                    -rtsopts
+                    -eventlog
+                    -XDataKinds
            
     
 
