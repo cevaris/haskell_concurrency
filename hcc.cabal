@@ -51,6 +51,20 @@ executable sudoku3
                     -rtsopts
                     -eventlog
 
+executable sudoku5
+    hs-source-dirs: src/sudoku/
+    main-is:        sudoku5.hs
+    other-modules:  Sudoku
+    build-depends:  base,
+                    deepseq,
+                    parallel,
+                    array,
+                    time     
+    ghc-options:    -O2
+                    -threaded
+                    -rtsopts
+                    -eventlog
+
 executable strategy
     hs-source-dirs: src/
     main-is:        strategy.hs
