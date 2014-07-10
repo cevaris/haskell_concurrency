@@ -18,5 +18,8 @@
 ####NFData
 - Short for **Normal Form data**. Normal form is a state or value which data has been fully evaluated. Similar to **rnf** or Reduced Normal Form.
  
-#####Evaluation Strategies
+####Evaluation Strategies
 - Simply, a Strategy is the separation of algorithm code from parallelization code. The input of a Strategy is a data structure, and traverses the structure creating Sparks via rpar/rseq. 
+
+####Parameterized Strategies 
+- Strategies that take input arguments which are used in parallelizing the data structure. 
