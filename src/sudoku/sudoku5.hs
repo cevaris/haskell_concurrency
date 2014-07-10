@@ -11,6 +11,6 @@ main = do
     file <- readFile filepath
 
     let puzzles   = lines file
-    let solutions = map solve puzzles `using` parList rseq
+    letsolutions = map solve puzzles `using` parList rseq
 
     print ( length ( filter isJust solutions ) )
