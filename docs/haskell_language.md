@@ -1,7 +1,7 @@
 # Haskell Language
 
 #### Infix Notation
-
+ 
 - Where the operator seprates the binary (left,right) arguments.
 - This is the most used, standard notation you would see in most programming languages.
 
@@ -26,7 +26,7 @@
 #### Boolean conditions
 - There are several keywords available to define a conditional statment
 
- - **&&, | | **
+  - **&&, | | **
     
     ```
     Prelude> (True && True)
@@ -34,7 +34,7 @@
     Prelude> False && (False || (True && True))
     False
     ```
- - **and,or** (prefix notation only), wierd because of the required square brackets.
+  - **and,or** (prefix notation only), wierd because of the required square brackets.
    
     ```
     Prelude> and [True, True]
@@ -42,7 +42,7 @@
     Prelude> and [False, or [False, and [True, False]]]
     False
     ```
- - **==,/=,<, <=, >, >=** (prefix notation only), wierd because of the required square brackets.
+  - **==,/=,<, <=, >, >=** (prefix notation only), wierd because of the required square brackets.
    
     ```
     Prelude> 3 /= 4
