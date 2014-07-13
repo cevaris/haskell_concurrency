@@ -49,4 +49,17 @@
 	True
     Prelude> 3 == 4
 	False
+	Prelude> (3 < 4) && (4 < 6)
+	True
     ``` 
+## Control Structures
+
+##### If c then a else b
+- Requires statements for each keyword **if**, **then**, and **else**.
+- **a** and **b** options need to return the same time and be expressions/evaluable. 
+
+    ```
+    Prelude> let x = 4
+    Prelude> if x < 5 then "Less than 5" else "Greater than 5"
+    "Less than 5"
+    ```
