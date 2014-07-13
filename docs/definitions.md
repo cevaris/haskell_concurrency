@@ -23,3 +23,5 @@
 
 ####Parameterized Strategies 
 - Strategies that take input arguments which are used in parallelizing the data structure. 
+
+  

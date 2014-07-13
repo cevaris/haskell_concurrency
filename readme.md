@@ -7,4 +7,5 @@
 ## Maintained Docs
 - [Concurrency Glossary](https://github.com/cevaris/haskell_concurrency/blob/master/docs/definitions.md)
 - [Functional/Language Glossary](https://github.com/cevaris/haskell_concurrency/blob/master/docs/functional_definitions.md)
+- [Haskell Language](https://github.com/cevaris/haskell_concurrency/blob/master/docs/haskell_language.md)
 - [Take Aways](https://github.com/cevaris/haskell_concurrency/blob/master/docs/take-aways.md)
