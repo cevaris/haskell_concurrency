@@ -10,7 +10,7 @@ main = do
     filepath <- getDataFileName f
     file <- readFile filepath
 
-    let puzzles   = lines file
-    letsolutions = map solve puzzles `using` parList rseq
+    let puzzles  = lines file
+    let solutions = map solve puzzles `using` parList rseq
 
     print ( length ( filter isJust solutions ) )

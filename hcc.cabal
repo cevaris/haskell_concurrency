@@ -11,7 +11,9 @@ data-files: sudoku17.1000.txt
 executable rpar
     hs-source-dirs:  src
     main-is:         rpar.hs
-    build-depends:   base, parallel, time
+    build-depends:   base, 
+                     parallel, 
+                     time
 
 
 executable sudoku1
@@ -78,7 +80,7 @@ executable strategy
                     -eventlog
                     -XDataKinds
            
-    
-
-
-    
+executable ex2-1
+    hs-source-dirs: src/haskell/ch2
+    main-is:        ex2-1.hs
+    build-depends:  base
