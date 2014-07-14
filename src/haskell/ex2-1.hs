@@ -27,13 +27,24 @@ excb :: (Num a) => [[a]] -> Bool
 excb (x:xs) = exba x
 
 
+-- Write an expression that concatenates two lists given inside another lists. For example, it should return "abcde" for ["abc","de"].
+exd :: [String] -> String
+exd []     = error "Empty string"
+exd (x:y:xs) = x ++ y
+exd (x:xs) = error "Need at least 2 elements"
+
+
+
+
+
 main = do
-    print (exca [])
-    print (exca [1])
-    print (exca [1,3])
-    print "-----"
-    print (excb [[]])
-    print (excb [[2],[3]])
+    print (exd ["abc", "blah", "ness"])
+    --print (exca [])
+    --print (exca [1])
+    --print (exca [1,3])
+    --print "-----"
+    --print (exd [[]])
+    --print (excb [[2],[3]])
 
 
 
