@@ -8,8 +8,10 @@ data-files: sudoku17.1000.txt
             sudoku17.16000.txt
             sudoku17.49151.txt
 
+
 executable rpar
     hs-source-dirs:  src
+    other-modules:   Haskell.Ch2.Example
     main-is:         rpar.hs
     build-depends:   base, 
                      parallel, 
