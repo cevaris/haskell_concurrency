@@ -86,3 +86,4 @@ executable ex2-1
     hs-source-dirs: src/haskell/ch2
     main-is:        ex2-1.hs
     build-depends:  base
+
