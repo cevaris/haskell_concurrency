@@ -21,3 +21,6 @@
     x :: (Integer, Integer, [Char])
 
     ```
+#### Abstract Algebraic Types (ADTs)
+- A name for a data type
+- A data type that contains constructors, that are used to create and hold new values.
