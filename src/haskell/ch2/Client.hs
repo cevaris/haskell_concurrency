@@ -1,9 +1,9 @@
 data Client = GovOrg     String
-            | Company    String Integer String Integer
-            | Individual Person Gender
+            | Company    String Integer Person String
+            | Individual Person Bool
             deriving Show
 
-data Person = Person String String
+data Person = Person String String Gender
             deriving Show
 
 -- Add a Gender argument to Person and make it Show able.
@@ -30,3 +30,11 @@ data MachineType = Past | Future
 
 data Price = Float
            deriving Show
+
+-- clientName (Individual (Person "Jimmy" "John" Male) False)
+clientName :: Client -> String
+clientName client = case client of
+                    GovOrg name -> name
+                    Company name id person position -> name
+                    Individual person ads -> 
+                        case person of Person fName lName gender -> fName ++ " " ++ lName
