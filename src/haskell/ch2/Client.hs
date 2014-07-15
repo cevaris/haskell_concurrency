@@ -38,3 +38,21 @@ clientName client = case client of
                     Company name id person position -> name
                     Individual person ads -> 
                         case person of Person fName lName gender -> fName ++ " " ++ lName
+
+
+clientName2 :: Client -> String
+clientName2 client = case client of
+                    GovOrg name -> name
+                    Company name _ _ _  -> name
+                    Individual (Person fName lName _) _ -> fName ++ " " ++ lName
+
+
+clientName3 :: Client -> Maybe String
+clientName3 client = case client of
+                    GovOrg name -> Just name
+                    Individual (Person fName lName _) _ -> Just (fName ++ " " ++ lName)
+                    _                                   -> Nothing
+
+
+
+
