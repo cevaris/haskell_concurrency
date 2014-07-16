@@ -54,6 +54,8 @@ clientName3 client = case client of
                     _                                   -> Nothing
 
 
+-- For statistical purposes, write a function that returns the number of clients of each gender. You may need to define an auxiliary data type to hold the results of this function.
+
 sum2 :: (Num a) => ([a], [a]) -> (a, a)
 sum2 (x,y) = (sum(x), sum(y))
 
@@ -62,5 +64,7 @@ countGender list = sum2 (unzip[ (if gender == Male then 1 else 0,
                                   if gender == Female then 1 else 0) | 
                                 (Person fName lName gender) <- list ])
 
+
+-- Every year a time comes when time machines are sold with a big discount to encourage potential buyers. Write a function that given a list of time machines, decreases their price by some percentage. Use the TimeMachine data type you defined in the previous set of exercises.
 
 
