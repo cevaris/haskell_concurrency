@@ -53,19 +53,25 @@ clientName3 client = case client of
                     Individual (Person fName lName _) _ -> Just (fName ++ " " ++ lName)
                     _                                   -> Nothing
 
--- addGenderCount (Person "Charles" "McGee" Male) 1 3
-addGenderCount :: Person -> Integer -> Integer -> (Integer, Integer)
-addGenderCount (Person fName lName gender) maleCount femaleCount =
-        (if gender == Male   then (maleCount+1)   else maleCount,
-         if gender == Female then (femaleCount+1) else femaleCount)
+---- addGenderCount (Person "Charles" "McGee" Male) 1 3
+--addGenderCount :: Person -> Integer -> Integer -> (Integer, Integer)
+--addGenderCount (Person fName lName gender) maleCount femaleCount =
+--        (if gender == Male   then (maleCount+1)   else maleCount,
+--         if gender == Female then (femaleCount+1) else femaleCount)
 
-inc2 :: (Integer, Integer) -> (Integer, Integer) -> (Integer, Integer)
-inc2 (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
+--inc2 :: (Integer, Integer) -> (Integer, Integer) -> (Integer, Integer)
+--inc2 (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
 
-countGender :: [Person] -> (Integer, Integer)
-countGender [] = (0, 0)
-countGender (x:xs) = inc2( addGenderCount(x), countGender(xs) )
---countGender ((Person fName lName gender):xs) = addGenderCount(gender) : countGender(xs)
+--countGender :: [Person] -> (Integer, Integer)
+--countGender [] = (0, 0)
+--countGender (x:xs) =  addGenderCount(x), countGender(xs) )
+----countGender ((Person fName lName gender):xs) = addGenderCount(gender) : countGender(xs)
+
+sum2 :: (Num a) => ([a], [a]) -> (a, a)
+sum2 (x,y) = (sum(x), sum(y))
+
+countGender :: (Num a) => [Person] -> (a, a)
+countGender list = sum2 (unzip [ (if gender == Male then 1 else 0, if gender == Female then 1 else 0) | (Person fName lName gender) <- list])
 
 
 
