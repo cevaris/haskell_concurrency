@@ -26,3 +26,14 @@ maxmin ls = let h = head ls
                 where t = maxmin (tail ls)
                       tmax = fst t
                       tmin = snd t
+
+
+-- Guarded fib
+fib n = if n < 0
+        then Nothing
+        else case n of
+            0 -> Just 0
+            1 -> Just 1
+            n -> let Just b1 = fib(n-1)
+                     Just b2 = fib(n-2)
+                 in Just (b1 + b2)
