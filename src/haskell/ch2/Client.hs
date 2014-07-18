@@ -60,6 +60,13 @@ countGender list = sum2 (unzip[
                    if gender == Female then 1 else 0) | 
                       (Person fName lName gender) <- list ])
 
+countGender2 :: (Num a) => [Person] -> (a, a)
+countGender2 [] = (0,0)
+countGender2 ((Person fName lName gender):xs) = 
+    ( if gender == Male   then xsMale+1 else xsMale, 
+      if gender == Female then xsFemale+1 else xsFemale ) 
+      where (xsMale, xsFemale) = countGender2 xs
+
 
 -- Every year a time comes when time machines are sold with a big discount to encourage potential buyers. Write a function that given a list of time machines, decreases their price by some percentage. Use the TimeMachine data type you defined in the previous set of exercises.
 
