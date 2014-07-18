@@ -19,17 +19,11 @@ data Gender = Male | Female | None
 You have learned how to define new data types, so it’s time to look at other types that could be useful for our Time Machine Store. Time machines are defined by its manufacturer, its model (which is an integer), its name, whether they can travel to the past and to the future and a price (which can be represented as a floating-point number). Define a TimeMachine data type holding that information. Try to use more than one ADT to structure the values.
 -}
 
-data Machine = TimeMachine Manufacturer Int String MachineType Price
+data Machine = TimeMachine String Int String MachineType Float
              deriving Show
-
-data Manufacturer = String 
-                  deriving Show
 
 data MachineType = Past | Future
                  deriving Show
-
-data Price = Float
-           deriving Show
 
 -- clientName (Individual (Person "Jimmy" "John" Male) False)
 clientName :: Client -> String
@@ -56,15 +50,29 @@ clientName3 client = case client of
 
 -- For statistical purposes, write a function that returns the number of clients of each gender. You may need to define an auxiliary data type to hold the results of this function.
 
+-- [(Person "Jimmy" "John" Male), (Person "Cindy" "Law" Female)]
 sum2 :: (Num a) => ([a], [a]) -> (a, a)
 sum2 (x,y) = (sum(x), sum(y))
 
 countGender :: (Num a) => [Person] -> (a, a)
-countGender list = sum2 (unzip[ (if gender == Male then 1 else 0, 
-                                  if gender == Female then 1 else 0) | 
-                                (Person fName lName gender) <- list ])
+countGender list = sum2 (unzip[ 
+                  (if gender == Male   then 1 else 0, 
+                   if gender == Female then 1 else 0) | 
+                      (Person fName lName gender) <- list ])
 
 
 -- Every year a time comes when time machines are sold with a big discount to encourage potential buyers. Write a function that given a list of time machines, decreases their price by some percentage. Use the TimeMachine data type you defined in the previous set of exercises.
+
+-- [(TimeMachine "Ford" 100 "BackTrack" Past 300020.0), (TimeMachine "Honda" 100 "Fasta" Future 350001.0)]
+modifyPrice :: Machine -> Float -> Machine
+modifyPrice (TimeMachine manufacturer modelId name mtype price) x = 
+            (TimeMachine manufacturer modelId name mtype (price + (price * (x / 100))))
+
+modifyMachinePrices :: [Machine] -> Float -> [Machine]
+modifyMachinePrices list x = [ modifyPrice machine x | machine <- list ]
+
+
+
+
 
 
