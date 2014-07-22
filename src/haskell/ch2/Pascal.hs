@@ -1,5 +1,7 @@
 module Haskell.Ch2.Pascal where
 
+import Data.Maybe
+
 --http://en.wikipedia.org/wiki/Binomial_coefficient
 
 {- 
@@ -19,9 +21,17 @@ factorial x = x * factorial(x-1)
 --                       else error "Invalid argument: k > n"
 --             else error "Invalid arguments: k is negative"
 
-pascal :: Integer -> Integer -> Integer
+--pascal :: Integer -> Integer -> Integer
+--pascal n k 
+--       | k < 0  = error "Invalid Argument: k is negative."
+--       | k > n  = error "Invalid Argument: k > n."
+--       | n == k = 1
+--       | otherwise = (factorial n) `div` ((factorial k) * factorial (n - k))
+
+
+pascal :: Integer -> Integer -> Maybe Integer
 pascal n k 
-       | k < 0  = error "Invalid Argument: k is negative."
-       | k > n  = error "Invalid Argument: k > n."
-       | n == k = 1
-       | otherwise = (factorial n) `div` ((factorial k) * factorial (n - k))
+       | k < 0  = Nothing
+       | k > n  = Nothing
+       | n == k = Just 1
+       | otherwise = Just ((factorial n) `div` ((factorial k) * factorial (n - k)))
