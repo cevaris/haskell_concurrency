@@ -82,4 +82,3 @@ modifyMachinePrices list x = [ modifyPrice machine x | machine <- list ]
 
 
 
-
