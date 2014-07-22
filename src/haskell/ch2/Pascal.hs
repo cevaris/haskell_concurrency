@@ -8,9 +8,17 @@ import Data.Maybe
 (n k) = (n!)/(k!(n-k)!)
 -}
 
+--factorial :: Integer -> Integer
+--factorial 0 = 1
+--factorial x = x * factorial(x-1)
+
 factorial :: Integer -> Integer
 factorial 0 = 1
-factorial x = x * factorial(x-1)
+factorial x = go x 1
+    where
+        go :: Integer -> Integer -> Integer
+        go 1 acc = acc
+        go y acc = go (y-1) acc $! (y * acc)
 
 --pascal :: Integer -> Integer -> Integer
 --pascal n k = if k >= 0
