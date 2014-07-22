@@ -18,7 +18,7 @@ factorial x = go x 1
     where
         go :: Integer -> Integer -> Integer
         go 1 acc = acc
-        go y acc = go (y-1) acc $! (y * acc)
+        go x acc = go (x-1) $! (x * acc)
 
 --pascal :: Integer -> Integer -> Integer
 --pascal n k = if k >= 0
