@@ -1,4 +1,4 @@
-module Haskell.Ch2.Pascal where
+module Haskell.Ch2.Ackermann where
 
 import Data.Maybe
 import Debug.Trace
@@ -12,22 +12,6 @@ a(m,n) = {
     A(m-1, A(m, n-1)); m>0, n>0
 }
 -}
-
---factorial :: Integer -> Integer
---factorial 0 = 1
---factorial x = go x 1
---    where
---        go :: Integer -> Integer -> Integer
---        go 1 acc = acc
---        go x acc = go (x-1) $! (x * acc)
-
---pascal :: Integer -> Integer -> Maybe Integer
---pascal n k 
---       | k < 0  = Nothing
---       | k > n  = Nothing
---       | n == k = Just 1
---       | otherwise = Just ((factorial n) `div` ((factorial k) * factorial (n - k)))
-
 
 -- | trace (show m) True
 ack :: Integer -> Integer -> Integer
