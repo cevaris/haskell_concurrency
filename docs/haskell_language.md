@@ -63,3 +63,6 @@
     Prelude> if x < 5 then "Less than 5" else "Greater than 5"
     "Less than 5"
     ```
+    
+## Records
+Records enables updating of part of structures easier via field name access.
