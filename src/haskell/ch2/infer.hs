@@ -20,3 +20,6 @@ index (x:xs) = let indexed@((n,_):_) = index xs
 --maybeA :: [t] -> Char
 maybeA :: [a] -> Char
 maybeA [] = 'a'
+
+multByN :: Num a => a -> (a -> a)
+multByN n = (\x -> x * n)
