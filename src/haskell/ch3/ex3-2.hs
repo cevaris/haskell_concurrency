@@ -23,8 +23,12 @@ data Gender = Male | Female | None
             deriving (Show, Eq)
 
 isGovOrg :: Client-> Bool
-isGovOrg (GovOrg name) = True
+isGovOrg (GovOrg _) = True
 isGovOrg _      = False
+
+
+filterGovOrgs :: [Client] -> [Client]
+filterGovOrgs l = filter isGovOrg l
 
 --clientName :: Client -> String
 --clientName client = case client of
