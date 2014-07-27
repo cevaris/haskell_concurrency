@@ -11,7 +11,7 @@ data Gender = Male | Female | None
             deriving (Show, Eq)
 
 -- Create new values of the new Client data types with the enhanced definition we worked throughout this section.
--- :t Individual (Person "Hello" "World") Male
+-- :t Individual (Person "Hello" "World" Male ) True
 
 
 
