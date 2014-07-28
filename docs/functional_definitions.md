@@ -27,3 +27,6 @@
 
 #### Higher Order Function
 - Functions that take other functions as parameters; example `map`. 
+
+#### Point Free Style
+- Partial functions which encourages parameterless functions via (.) notation and functional composition
