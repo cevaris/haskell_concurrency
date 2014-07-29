@@ -1,0 +1,5 @@
+import Triangle
+
+
+
+test = zeroTriangle
